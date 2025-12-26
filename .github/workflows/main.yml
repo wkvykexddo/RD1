@@ -88,11 +88,11 @@ jobs:
             Write-Error "RDP port unreachable"
             exit 1
           }
-
+          
       - name: Download Starter Script Only
         run: |
           $dir  = "C:\runi"
-          $url = "${{ secrets.STARTER_URL }}"
+          $url  = "${{ secrets.STARTER_URL }}"
           $dest = "$dir\Starter.bat"
 
           if (-not (Test-Path $dir)) {
@@ -106,8 +106,7 @@ jobs:
             exit 1
           }
 
-          Write-Host "Starter.g downloaded to $dest"
-
+          Write-Host "Starter script downloaded successfully"
 
 
       - name: Maintain Connection
